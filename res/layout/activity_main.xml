@@ -1,0 +1,52 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+
+    <ScrollView
+        android:id="@+id/scrollContent"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:fadeScrollbars="true"
+        android:fillViewport="true" >
+
+        <RelativeLayout
+            android:id="@+id/edit_layout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" >
+
+            <TextView
+                android:id="@+id/serverIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+
+            <EditText
+                android:id="@+id/host"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/serverIp"
+                android:digits="1234567890."
+                android:hint="@string/set_host"
+                android:maxLines="1"
+                android:text="192.168.123.1" >
+            </EditText>
+
+            <Button
+                android:id="@+id/ok"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/host"
+                android:layout_centerHorizontal="true"
+                android:text="@android:string/ok" />
+
+            <TextView
+                android:id="@+id/outPut"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ok"
+                android:visibility="visible" />
+        </RelativeLayout>
+    </ScrollView>
+
+</RelativeLayout>
